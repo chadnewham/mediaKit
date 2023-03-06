@@ -1,0 +1,128 @@
+
+body{
+    margin: 0;
+}
+.center-page{
+    position: relative;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: "a a a"
+                         "c c c"
+                         "b b b";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+section > .header{
+    grid-area: a;
+}
+section > .sidebar{
+    grid-area: c;
+}
+section > .content{
+    grid-area: b;
+}
+section > .footer{
+    grid-area: d;
+}
+
+.image{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width:400px;
+    max-height:300px;
+    border-radius: 1rem;
+    width: auto;
+    height: auto;
+    transition: 500ms;
+
+}
+.image:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width:500px;
+    max-height:400px;
+    border-radius: 0rem;
+    width: auto;
+    height: auto;
+    transition: 500ms;
+}
+
+.social-icon{
+    width: 4em;
+    height: auto;
+ }
+ .social-icon-container{
+    flex: 1;
+    justify-content: space-evenly;
+ }
+
+.brush-background-two{
+    padding-bottom: 50vh;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-image: url("/public/assets/Brush/drawing-2.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    filter: hue-rotate(310deg);
+    
+}
+.info{
+    width: 42ch;
+    font-size: 1.5em;
+}
+.fancy-font{
+    font-family: 'Allura';
+    font-size: 4em;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    font-family: 'PoiretOne';
+    font-size: 10rem;
+}
+.flex{
+    display: flex;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.l-r-margin{
+    margin: 0 1vw;
+}
+.pad{
+    padding: 1rem;
+}
+.hide-image{
+    transition: 200ms;
+    display: None;
+}
+
+@media (max-width: 800px) {
+    .center-page {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .header{
+        font-size: 5rem;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .info{
+        font-size: 1em;
+    }
+    .image{
+        
+    }
+  }
