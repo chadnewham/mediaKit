@@ -1,6 +1,7 @@
 
 
-var deg = 0;
+let deg = 0;
+let rdeg = 0;
 
 function changeHue(){
 
@@ -13,4 +14,16 @@ function changeHue(){
 
     setTimeout(changeHue, 200);
 }
+function rotateSVG(){
+
+    document.querySelector('.brush-background-two').style.transform = `rotate(${rdeg}deg)`
+    rdeg += .02;
+
+    if(rdeg >= 360){
+        rdeg = 0;
+    }
+
+    setTimeout(rotateSVG, 20);
+}
 changeHue();
+rotateSVG();
